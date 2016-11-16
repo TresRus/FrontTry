@@ -1,0 +1,10 @@
+h2 {
+	color: blue;
+	background-color: yellow;
+	text-transform: uppercase;
+	border-style: solid;
+	border-color: red;
+	border-width: 2px;
+	padding: 10px;
+}
+
