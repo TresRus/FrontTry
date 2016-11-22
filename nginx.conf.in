@@ -1,0 +1,16 @@
+server {
+	location / {
+		root %repo_dir%/%site%/www;
+	}
+
+	location ~* \.css$ {
+		types {
+			text/css css;
+		}
+		root %repo_dir%/%site%/css;
+	}
+
+	location ~* \.js$ {
+		root %repo_dir%/%site%/script;
+	}
+}
