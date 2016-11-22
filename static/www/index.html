@@ -2,78 +2,151 @@
 <html>
 	<head>
 		<title>My first web page</title>
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="/style.css"/>
 	</head>
 	<body>
 		<h1>My first web page</h1>
 		<h2>List of content</h2>
-		<ul>
-			<li><a href="#what">What this is</a></li>
-			<li><a href="#why">Why this is</a></li>
-			<li><a href="#table">Some table stuff</a></li>
-			<li><a href="#tutorial">Where to find the tutorial</a></li>
-			<li><a href="#name-thing">Page about name</a></li>
-			<li><a href="#friends-thing">Do not forget friends</a></li>
-		</ul>
+		<nav id="main_nav">
+			<ul>
+				<li><a href="#what">What this is</a></li>
+				<li><a href="#why">Why this is</a></li>
+				<li><a href="#table">Some table stuff</a></li>
+				<li><a href="#tutorial">Where to find the tutorial</a></li>
+				<li><a href="#name-thing">Page about name</a></li>
+				<li><a href="#friends-thing">Do not forget friends</a></li>
+				<li><a href="#quote">Quote thing</a></li>
+				<li><a href="#preformated">Preformated text</a></li>
+				<li><a href="#glossary">Some random glossry thing</a></li>
+				<li><a href="#text_other">Some text marks</a></li>
+				<li><a href="#contact">Author contact details</a></li>
+			</ul>
+		</nav>
 
-		<h2 id="what">What this is</h2>
-		<p>A simple page put together using HTML</p>
+		<article>
+			<section id="what">
+				<h2>What this is</h2>
+				<p>A simple page put together using <abbr title="HyperText Markup Language">HTML</abbr></p>
+			</section>
+			<section id="why">
+				<h2>Why this is</h2>
+				<ul>
+					<li>To learn HTML</li>
+					<li>
+						To show off
+						<ol>
+							<li>To my boss</li>
+							<li>To my friends</li>
+							<li>To my cat</li>
+							<li>To the little talking duck in my brain</li>
+						</ol>
+					</li>
+					<li>Because I've fallen in love with my computer and want to give her some HTML loving.</li>
+				</ul>
+			</section>
+			<section id="table">
+				<h2>Some table stuff</h2>
 
-		<h2 id="why">Why this is</h2>
-		<ul>
-			<li>To learn HTML</li>
-			<li>
-				To show off
-				<ol>
-					<li>To my boss</li>
-					<li>To my friends</li>
-					<li>To my cat</li>
-					<li>To the little talking duck in my brain</li>
-				</ol>
-			</li>
-			<li>Because I've fallen in love with my computer and want to give her some HTML loving.</li>
-		</ul>
+				<table>
+					<tr>
+						<th>Column 1 heading</th>
+						<th>Column 2 heading</th>
+						<th>Column 3 heading</th>
+					</tr>
+					<tr>
+						<td>Row 2, cell 1</td>
+						<td colspan="2">Row 2, cell 2, also spanning Row 2, cell 3</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Row 3, cell 1, also spanning Row 4, cell 1</td>
+						<td>Row 3, cell 2</td>
+						<td>Row 3, cell 3</td>
+					</tr>
+					<tr>
+						<td>Row 4, cell 2</td>
+						<td>Row 4, cell 3</td>
+					</tr>
+				</table>
+			</section>
+			<section id="tutorial">
+				<h2>Where to find the tutorial</h2>
+				<p>
+					<a href="http://www.htmldog.com">
+						<img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog">
+					</a>
+				</p>
+			</section>
+			<section id="name-thing">
+				<h2>Page about name</h2>
+				<p>
+					Some name magic <a href="/name.html">here</a>.
+				</p>
+			</section>
+			<section id="friends-thing">
+				<h2>Do not forget friends</h2>
+				<p>
+					<a href="/friends.html">Go</a> say hi.
+				</p>
+			<section id="quote">
+				<h2>Quote thing</h2>
+				<p>So I asked Bob about quotations on the Web and he said <q>I know as much about quotations as I do about pigeon fancying</q>. Luckily, I found HTML Dog and it said:</p>
 
-		<h2 id="table">Some table stuff</h2>
-		<table>
-			<tr>
-				<td>Row 1, cell 1</td>
-				<td>Row 1, cell 2</td>
-				<td>Row 1, cell 3</td>
-			</tr>
-			<tr>
-				<td>Row 2, cell 1</td>
-				<td>Row 2, cell 2</td>
-				<td>Row 2, cell 3</td>
-			</tr>
-			<tr>
-				<td>Row 3, cell 1</td>
-				<td>Row 3, cell 2</td>
-				<td>Row 3, cell 3</td>
-			</tr>
-			<tr>
-				<td>Row 4, cell 1</td>
-				<td>Row 4, cell 2</td>
-				<td>Row 4, cell 3</td>
-			</tr>
-		</table>
+				<blockquote cite="http://www.htmldog.com/guides/html/intermediate/text/">
+					<p>blockquote and q are used for quotations. blockquote is generally used for standalone often multi-line quotations whereas q is used for shorter, in-line quotations.</p>
+				</blockquote>
 
+				<p>According to <cite>the Bible</cite>, after six days God said <q>screw this for a lark, I'm having a nap</q>.</p>
 
-		<h2 id="tutorial">Where to find the tutorial</h2>
-		<p>
-			<a href="http://www.htmldog.com">
-				<img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog">
-			</a>
-		</p>
+				<p>If you add the line <code><var>givevaderachuckle</var> = true;</code> to the <code>destroy_planet</code> subroutine and then type <kbd>ilovejabba</kbd> into the console, the big bad green Death Star laser will etch <samp>Slug Lover!</samp> on the planet's surface.</p>
+			</section>
+			<section id="preformated">
+				<h2>Preformated text</h2>
+<pre><code>
+&lt;div id="intro"&gt;
+	&lt;h1&gt;Some heading&lt;/h1&gt;
+		&lt;p&gt;Some paragraph paragraph thing thing thingy.&lt;/p&gt;
+		&lt;/div&gt;
+</code></pre>
+			</section>
+			<section id="glossary">
+				<h2>Some random glossry thing</h2>
+				<dl>
+					<dt>HTML</dt>
+					<dd>Abbreviation for HyperText Markup Language - a language used to make web pages.</dd>
 
-		<h2 id="name-thing">Page about name</h2>
-		<p>
-			Some name magic <a href="/name.html">here</a>.
-		</p>
+					<dt>Dog</dt>
+					<dd>Any carnivorous animal belonging to the family Canidae.</dd>
+					<dd>The domesticated sub-species of the family Canidae, Canis lupus familiaris.</dd>
 
-		<h2 id="friends-thing">Do not forget friends</h2>
-		<p>
-			<a href="/friends.html">Go</a> say hi.
-		</p>
+					<dt>Moo juice</dt>
+					<dt>Cat beer</dt>
+					<dt>Milk</dt>
+					<dd>A white liquid produced by cows and used for human consumption.</dd>
+				</dl>
+			</section>
+			<section id="text_other">
+				<h2>Some text marks</h2>
+				<p>Bob's <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.</p>
+
+				<bdo dir="rtl">god lmth</bdo>
+
+				<p>I have decided to <del datetime="2013-01-26">decrease</del> <ins cite="http://www.icecreamforall.com/changeofpolicy/">increase</ins> the amount of free ice cream that the State will provide for its citizens.</p>
+			</section>
+			<section id="contact">
+				<h2>Author contact details</h2>
+				<aside>
+					<h3>note about address</h3>
+					<p>lalala</p>
+				</aside>
+				<address>
+					<ul>
+						<li>0123-456-7890</li>
+						<li>author_dude@noplaceinteresting.com</li>
+						<li>http://www.noplaceinteresting.com/contactme/</li>
+					</ul>
+				</address>
+			</section>
+		</article>
 	</body>
 </html>

@@ -12,3 +12,24 @@ h2 {
 	padding: 10px;
 }
 
+table {
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 3px;
+	border: 1px solid #000000;
+}
+
+th {
+	background: #aed6f1;
+}
+
+del {
+	background: #ec7063;
+}
+
+ins {
+	background: #58d68d;
+}
+
