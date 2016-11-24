@@ -33,3 +33,31 @@ ins {
 	background: #58d68d;
 }
 
+li, dd {
+	color: grey;
+}
+
+a:link {
+	color: #d35400;
+}
+
+a:visited {
+	color: #5d6d7e;
+}
+
+a:active {
+	color: red;
+}
+
+a:hover {
+	text-decoration: none;
+	color: blue;
+	background-color: yellow;
+}
+
+li:before {
+	content: "POW! ";
+	background: red;
+	color: #fc0;
+}
+

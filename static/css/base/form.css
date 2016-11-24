@@ -1,0 +1,63 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+#global {
+	width: 100%;
+	min-height: 100%;
+	background-color: #a9dfbf;
+}
+
+#global p {
+	margin: 0;
+}
+
+
+#head {
+	width: 100%;
+	background: #229954 url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
+}
+
+.header-text {
+	padding: 1em;
+}
+
+#workspace {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#body {
+	width: 100%;
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+}
+
+#content {
+	margin-left: 200px;
+	width: auto;
+}
+
+#wrap {
+	padding: 10px;
+}
+
+#wrap #box {
+	background-color: #fbfcfc;
+}
+
+#wrap #menu {
+}
+
+.button {
+	padding: 0.5em;
+}
+
+.button:hover {
+	background-color: #d5f5e3;
+}
+

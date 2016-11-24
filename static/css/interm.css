@@ -1,0 +1,42 @@
+#box p {
+	font: 14px/1.5 "Times New Roman", times, serif;
+	padding: 30px 10px;
+	border: 1px black solid;
+	border-width: 1px 5px 5px 1px;
+	border-color: red green blue yellow;
+	margin: 10px 50px;
+}
+
+#top {
+	background-color: #ccc;
+	padding: 1em
+}
+
+#top h1 {
+	color: #ff0;
+}
+
+#top p {
+	color: red;
+	font-weight: bold;
+}
+
+#first p:first-child {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+
+#text p {
+	font-size: 15px;
+}
+
+#text p:first-letter {
+	font-size: 40px;
+	float: left;
+}
+
+#text p:first-line {
+	font-weight: bold;
+}
+
