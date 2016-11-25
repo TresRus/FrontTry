@@ -13,4 +13,8 @@ server {
 	location ~* \.js$ {
 		root %repo_dir%/%site%/script;
 	}
+
+	location ~* \.json$ {
+		root %repo_dir%/%site%/json;
+	}
 }
