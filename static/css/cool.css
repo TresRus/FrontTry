@@ -1,0 +1,28 @@
+.alternative {
+	background-color: red;
+}
+
+input[type=email]:valid {
+	background: green
+}
+
+input[type=email]:invalid {
+	background: red
+}
+
+input[type=url]:valid {
+	background: green
+}
+
+input[type=url]:invalid {
+	background: red
+}
+
+input[type=tel]:valid {
+	background: green
+}
+
+input[type=tel]:invalid {
+	background: red
+}
+
