@@ -21,6 +21,7 @@ html, body {
 
 .header-text {
 	padding: 1em;
+	text-shadow: -2px 2px 2px #d6eaf8;
 }
 
 #workspace {
@@ -48,13 +49,16 @@ html, body {
 
 #wrap #box {
 	background-color: #fbfcfc;
+	box-shadow: 3px 3px 2px 1px #999;
 }
 
 #wrap #menu {
 }
 
 .button {
+	transition: background-color 0.5s ease;
 	padding: 0.5em;
+	border-radius: 0px 5px 5px 5px;
 }
 
 .button:hover {
