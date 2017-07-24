@@ -1,20 +1,22 @@
 server {
-	location / {
-		root %repo_dir%/%site%/www;
-	}
+    listen 80;
 
-	location ~* \.css$ {
-		types {
-			text/css css;
-		}
-		root %repo_dir%/%site%/css;
-	}
+    location / {
+        root %repo_dir%/%site%/www;
+    }
 
-	location ~* \.js$ {
-		root %repo_dir%/%site%/script;
-	}
+    location ~* \.css$ {
+        types {
+            text/css css;
+        }
+        root %repo_dir%/%site%/css;
+    }
 
-	location ~* \.json$ {
-		root %repo_dir%/%site%/json;
-	}
+    location ~* \.js$ {
+        root %repo_dir%/%site%/script;
+    }
+
+    location ~* \.json$ {
+        root %repo_dir%/%site%/json;
+    }
 }
