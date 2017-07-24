@@ -1,67 +1,67 @@
 html, body {
-	height: 100%;
-	margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 #global {
-	width: 100%;
-	min-height: 100%;
-	background-color: #a9dfbf;
+    width: 100%;
+    min-height: 100%;
+    background-color: #a9dfbf;
 }
 
 #global p {
-	margin: 0;
+    margin: 0;
 }
 
 
 #head {
-	width: 100%;
-	background: #229954 url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
+    width: 100%;
+    background: #229954 url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
 }
 
 .header-text {
-	padding: 1em;
-	text-shadow: -2px 2px 2px #d6eaf8;
+    padding: 1em;
+    text-shadow: -2px 2px 2px #d6eaf8;
 }
 
 #workspace {
-	width: 900px;
-	margin: 0 auto;
+    width: 900px;
+    margin: 0 auto;
 }
 
 #body {
-	width: 100%;
+    width: 100%;
 }
 
 #sidebar {
-	float: left;
-	width: 200px;
+    float: left;
+    width: 200px;
 }
 
 #content {
-	margin-left: 200px;
-	width: auto;
+    margin-left: 200px;
+    width: auto;
 }
 
 #wrap {
-	padding: 10px;
+    padding: 10px;
 }
 
 #wrap #box {
-	background-color: #fbfcfc;
-	box-shadow: 3px 3px 2px 1px #999;
+    background-color: #fbfcfc;
+    box-shadow: 3px 3px 2px 1px #999;
 }
 
 #wrap #menu {
 }
 
 .button {
-	transition: background-color 0.5s ease;
-	padding: 0.5em;
-	border-radius: 0px 5px 5px 5px;
+    transition: background-color 0.5s ease;
+    padding: 0.5em;
+    border-radius: 0px 5px 5px 5px;
 }
 
 .button:hover {
-	background-color: #d5f5e3;
+    background-color: #d5f5e3;
 }
 

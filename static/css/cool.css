@@ -1,83 +1,83 @@
 .alternative {
-	background-color: red;
+    background-color: red;
 }
 
 input[type=email]:valid {
-	background: green
+    background: green
 }
 
 input[type=email]:invalid {
-	background: red
+    background: red
 }
 
 input[type=url]:valid {
-	background: green
+    background: green
 }
 
 input[type=url]:invalid {
-	background: red
+    background: red
 }
 
 input[type=tel]:valid {
-	background: green
+    background: green
 }
 
 input[type=tel]:invalid {
-	background: red
+    background: red
 }
 
 #back {
-	width: 100px;
-	height: 100px;
-	margin: 140px auto;
-	background: #abb2b9;
+    width: 100px;
+    height: 100px;
+    margin: 140px auto;
+    background: #abb2b9;
 }
 
 .note {
-	width: 100%;
-	height: 100%;
-	line-height: 100px;
-	text-align: center;
-	background: hsl(36,100%,50%);
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    background: hsl(36,100%,50%);
 }
 
 .note p {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 #rotate {
-	transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 #skew {
-	transform: skew(20deg, 10deg);
+    transform: skew(20deg, 10deg);
 }
 
 #scale1 {
-	transform: scale(2);
+    transform: scale(2);
 }
 
 #scale2 {
-	transform: scale(1, 2);
+    transform: scale(1, 2);
 }
 
 #translate {
-	transform: translate(100px, 200px);
+    transform: translate(100px, 200px);
 }
 
 .shift-origin {
-	transform-origin: top right;
+    transform-origin: top right;
 }
 
 #gradient {
-	width: 400px;
-	height: 200px;
-	background: linear-gradient(20deg, yellow, red); 
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(20deg, yellow, red); 
 }
 
 #gradient-round {
-	width: 400px;
-	height: 200px;
-	background: radial-gradient(yellow, green); 
+    width: 400px;
+    height: 200px;
+    background: radial-gradient(yellow, green); 
 }
 

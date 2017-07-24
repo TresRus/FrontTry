@@ -1,63 +1,63 @@
 h1 {
-	color: #009933;
+    color: #009933;
 }
 
 h2 {
-	color: blue;
-	background-color: yellow;
-	text-transform: uppercase;
-	border-style: solid;
-	border-color: red;
-	border-width: 2px;
-	padding: 10px;
+    color: blue;
+    background-color: yellow;
+    text-transform: uppercase;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    padding: 10px;
 }
 
 table {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 td, th {
-	padding: 3px;
-	border: 1px solid #000000;
+    padding: 3px;
+    border: 1px solid #000000;
 }
 
 th {
-	background: #aed6f1;
+    background: #aed6f1;
 }
 
 del {
-	background: #ec7063;
+    background: #ec7063;
 }
 
 ins {
-	background: #58d68d;
+    background: #58d68d;
 }
 
 li, dd {
-	color: grey;
+    color: grey;
 }
 
 a:link {
-	color: #d35400;
+    color: #d35400;
 }
 
 a:visited {
-	color: #5d6d7e;
+    color: #5d6d7e;
 }
 
 a:active {
-	color: red;
+    color: red;
 }
 
 a:hover {
-	text-decoration: none;
-	color: blue;
-	background-color: yellow;
+    text-decoration: none;
+    color: blue;
+    background-color: yellow;
 }
 
 li:before {
-	content: "POW! ";
-	background: red;
-	color: #fc0;
+    content: "POW! ";
+    background: red;
+    color: #fc0;
 }
 
