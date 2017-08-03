@@ -87,6 +87,59 @@ class Clock extends React.Component {
     }
 }
 
+class LaserButton extends React.Component {
+    activateLasers() {
+        console.log("Lasers!!!! Piu piu");
+    }
+
+    render() {
+        return (
+            <button onClick={this.activateLasers}>
+                Activate Lasers
+            </button>
+        );
+    }
+}
+
+class ActionLink extends React.Component {
+    handleClick(e) {
+        e.preventDefault();
+        console.log("Msg: " + this.props.message);
+    }
+
+    render() {
+        return (
+            <a href="#" onClick={this.handleClick.bind(this)}>
+                Click me
+            </a>
+        )
+    }
+}
+
+class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+
+        // to make function work in callback
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    render() {
+        return (
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        );
+    }
+}
+
 const comment = {
     date: new Date(),
     text: 'I hope you enjoy learning React!',
@@ -104,6 +157,15 @@ const element = (
             date={comment.date}
             text={comment.text}
             author={comment.author} />
+        <div>
+            <LaserButton />
+        </div>
+        <div>
+            <ActionLink message="Test link" />
+        </div>
+        <div>
+            <Toggle />
+        </div>
     </div>
 );
 
