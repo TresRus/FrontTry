@@ -140,6 +140,161 @@ class Toggle extends React.Component {
     }
 }
 
+class UserGreeting extends React.Component {
+    render() {
+        return <h1>Welcome back!</h1>;
+    }
+}
+
+class GuestGreeting extends React.Component {
+    render() {
+        return <h1>Please sing up.</h1>;
+    }
+}
+
+class Greeting extends React.Component {
+    render() {
+        const isLoggedIn = this.props.isLoggedIn;
+        if (isLoggedIn) {
+            return <UserGreeting />;
+        }
+
+        return <GuestGreeting />;
+    }
+}
+
+class LoginButton extends React.Component {
+    render() {
+        return (
+            <button onClick={this.props.onClick}>
+                Login
+            </button>
+        );
+    }
+}
+
+class LogoutButton extends React.Component {
+    render() {
+        return (
+            <button onClick={this.props.onClick}>
+                Logout
+            </button>
+        );
+    }
+}
+
+class LoginControl extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleLogoutClick = this.handleLogoutClick.bind(this);
+        this.state = {isLoggedIn: false};
+    }
+
+    handleLoginClick() {
+        this.setState({isLoggedIn: true});
+    }
+
+    handleLogoutClick() {
+        this.setState({isLoggedIn: false});
+    }
+
+    render() {
+        const isLoggedIn = this.state.isLoggedIn;
+
+        return (
+            <div>
+                The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+                <Greeting isLoggedIn={isLoggedIn} />
+                {isLoggedIn ? (
+                    <LogoutButton onClick={this.handleLogoutClick} />
+                ) : (
+                    <LoginButton onClick={this.handleLoginClick} />
+                )}
+            </div>
+        );
+    }
+}
+
+class Mailbox extends React.Component {
+    render() {
+        const unreadMessages = this.props.unreadMessages;
+
+        return (
+            <div>
+                <h1>Mail:</h1>
+                {unreadMessages.length > 0 &&
+                    <h2>
+                        You have {unreadMessages.length} unread messages.
+                    </h2>
+                }
+            </div>
+        )
+    }
+}
+
+class WarningBanner extends React.Component {
+    render() {
+        if (!this.props.warning) {
+            return null;
+        }
+
+        return (
+            <div className="warning">
+                Warning!
+            </div>
+        );
+    }
+}
+
+class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {showWarning: true};
+        this.handleToggleClick = this.handleToggleClick.bind(this);
+    }
+
+    handleToggleClick() {
+        this.setState(prevState => ({
+            showWarning: !prevState.showWarning
+        }));
+    }
+
+    render() {
+        return (
+            <div>
+                <div>
+                    <WarningBanner warning={this.state.showWarning} />
+                    <button onClick={this.handleToggleClick}>
+                        {this.state.showWarning ? 'Hide' : 'Show'}
+                    </button>
+                </div>
+                <div>
+                    <LoginControl />
+                    <Mailbox unreadMessages={messages} />
+                    <Clock />
+                    <App />
+                    <Comment
+                        date={comment.date}
+                        text={comment.text}
+                        author={comment.author} />
+                    <div>
+                        <LaserButton />
+                    </div>
+                    <div>
+                        <ActionLink message="Test link" />
+                    </div>
+                    <div>
+                        <Toggle />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+const messages = ['React', 'Re: React', 'Re:Re: React'];
+
 const comment = {
     date: new Date(),
     text: 'I hope you enjoy learning React!',
@@ -149,27 +304,7 @@ const comment = {
     }
 };
 
-const element = (
-    <div>
-        <Clock />
-        <App />
-        <Comment
-            date={comment.date}
-            text={comment.text}
-            author={comment.author} />
-        <div>
-            <LaserButton />
-        </div>
-        <div>
-            <ActionLink message="Test link" />
-        </div>
-        <div>
-            <Toggle />
-        </div>
-    </div>
-);
-
 ReactDOM.render(
-    element,
+    <Page />,
     document.getElementById('root')
 );
