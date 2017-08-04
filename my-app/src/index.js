@@ -247,6 +247,59 @@ class WarningBanner extends React.Component {
     }
 }
 
+class ListItem extends React.Component {
+    render() {
+        return <li>{this.props.value}</li>;
+    }
+}
+
+class NumberList extends React.Component {
+    render() {
+        const numbers = this.props.numbers;
+        const listItems = numbers.map((number) =>
+            <ListItem key={number.toString()}
+                      value={number} /> 
+        );
+
+        return (
+            <ul>
+                {listItems}
+            </ul>
+        );
+    }
+}
+
+class Blog extends React.Component {
+    render() {
+        const sidebar = (
+            <ul>
+                {this.props.posts.map((post) =>
+                    <li key={post.id}>
+                        {post.title}
+                    </li>
+                )}
+            </ul>
+        );
+
+        const content = (
+            this.props.posts.map((post) =>
+                <div key={post.id}>
+                    <h3>{post.title}</h3>
+                    <p>{post.content}</p>
+                </div>
+            )
+        );
+
+        return (
+            <div>
+                {sidebar}
+                <hr />
+                {content}
+            </div>
+        );
+    }
+}
+
 class Page extends React.Component {
     constructor(props) {
         super(props);
@@ -261,6 +314,12 @@ class Page extends React.Component {
     }
 
     render() {
+        const numbers = [1, 2, 3, 4, 5];
+        const posts = [
+            {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+            {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+        ];
+
         return (
             <div>
                 <div>
@@ -287,6 +346,8 @@ class Page extends React.Component {
                     <div>
                         <Toggle />
                     </div>
+                    <NumberList numbers={numbers} />
+                    <Blog posts={posts} />
                 </div>
             </div>
         );
