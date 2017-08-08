@@ -553,6 +553,87 @@ class Calculator extends React.Component {
   }
 }
 
+class FancyBorder extends React.Component {
+  render() {
+    return (
+      <div className={'FancyBorder FancyBorder-' + this.props.color}>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+class Dialog extends React.Component {
+  render() {
+    return (
+      <FancyBorder color="blue">
+        <h1 className="Dialog-title">
+          {this.props.title}
+        </h1>
+        <p className="Dialog-message">
+          {this.props.message}
+        </p>
+        {this.props.children}
+      </FancyBorder>
+    );
+  }
+}
+
+class WelcomeDialog extends React.Component {
+  render() {
+    return (
+      <Dialog
+        title="Welcome"
+        message="Thank you for visiting our spacecraft!" />
+    );
+  }
+}
+
+class SignUpDialog extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
+    this.state = {login: ''};
+  }
+
+  handleChange(event) {
+    this.setState({login: event.target.value});
+  }
+
+  handleSignUp() {
+    alert(`Welcome aboard, ${this.state.login}!`);
+  }
+
+  render() {
+    return (
+      <Dialog title="Mars Exploration Program"
+              message="How should we refer to you?">
+        <input value={this.state.login}
+               onChange={this.handleChange} />
+        <button onClick={this.handleSignUp}>
+          Sing Me Up!
+        </button>
+      </Dialog>
+    );
+  }
+}
+
+class SplitPane extends React.Component {
+  render() {
+    return (
+      <div className="SplitPane">
+        <div className="SplitPane-left">
+          {this.props.left}
+        </div>
+        <div className="SplitPane-right">
+          {this.props.right}
+        </div>
+      </div>
+    );
+  }
+}
+
 class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -600,11 +681,24 @@ class Page extends React.Component {
             {this.state.showWarning ? 'Hide' : 'Show'}
           </button>
         </div>
+        <WelcomeDialog />
         <div>
+          <SignUpDialog />
           <LoginControl />
-          <Mailbox unreadMessages={messages} />
-          <Clock />
-          <App />
+        </div>
+        <div>
+          <SplitPane
+            left={
+              <div>
+                <Mailbox unreadMessages={messages} />
+                <Clock />
+              </div>
+            }
+            right={
+              <App />
+            } />
+        </div>
+        <div>
           <Comment
             date={comment.date}
             text={comment.text}
