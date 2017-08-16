@@ -42,3 +42,13 @@ html, body, #root {
   width: 70%;
   height: 100%;
 }
+
+.ProductRow {
+}
+
+.ProductRow-ok {
+}
+
+.ProductRow-out {
+  color: red;
+}
